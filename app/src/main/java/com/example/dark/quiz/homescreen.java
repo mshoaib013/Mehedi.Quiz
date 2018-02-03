@@ -27,6 +27,7 @@ public class homescreen extends AppCompatActivity{
     private TextView over;
     private TextView finalScoreTextview;
     private TextView timeleft;
+    private TextView startextview;
 
 
     //All Imageview
@@ -90,11 +91,37 @@ public class homescreen extends AppCompatActivity{
                     over.setVisibility(TextView.VISIBLE);
                     bg2.setVisibility(LinearLayout.VISIBLE);
                     finalScoreTextview.setText("Score : "+String.valueOf(score));
-                    if (score>0) {
-                        //scoreStar.setVisibility(ImageView.VISIBLE);
-                        scoreStar.setImageResource(R.drawable.soundicon);
 
+
+
+                    if (score==0) {
+                        //scoreStar.setVisibility(ImageView.VISIBLE);
+                        startextview.setText("Seriouly!! 0 Star!!!");
+                        scoreStar.setImageResource(R.drawable.onestar);
                     }
+                    else if(score<3){
+                        startextview.setText("Try Harder1");
+                        scoreStar.setImageResource(R.drawable.onestar);
+                    }
+                    else if(score<5){
+                        startextview.setText("Try More and More");
+                        scoreStar.setImageResource(R.drawable.twostar);
+                    }
+                    else if(score<7){
+                        startextview.setText("Try Your Best");
+                        scoreStar.setImageResource(R.drawable.threestar);
+                    }
+                    else if(score<9){
+                        startextview.setText("Keep trying");
+                        scoreStar.setImageResource(R.drawable.fourstar);
+                    }
+                    else{
+                        startextview.setText("You are Genios Man!!!");
+                        scoreStar.setImageResource(R.drawable.fivestar);
+                    }
+
+
+
                 }
             }
         }.start();
@@ -162,6 +189,7 @@ public class homescreen extends AppCompatActivity{
         c2=(TextView) findViewById(R.id.choice2);
         c3=(TextView) findViewById(R.id.choice3);
         c4=(TextView) findViewById(R.id.choice4);
+        startextview = (TextView) findViewById(R.id.startextview);
 
         //TimerTextview
         timeCountdown=(TextView) findViewById(R.id.timer);
@@ -180,7 +208,7 @@ public class homescreen extends AppCompatActivity{
         que[0][1]="Shoab";
         que[0][2]="Mehedi";
         que[0][3]="WTF!!!!";
-        que[0][4]="I am UR Father";
+        que[0][4]="I";
         que[0][5]="1";
 
         que[1][0]="Your NSU CGPA??";
@@ -190,11 +218,11 @@ public class homescreen extends AppCompatActivity{
         que[1][4]="Between 2 & 3";
         que[1][5]="4";
 
-        que[2][0]="Fav porn category";
-        que[2][1]="Anal";
-        que[2][2]="Threesome";
-        que[2][3]="Gangbang";
-        que[2][4]="Lesbian";
+        que[2][0]="Fav category";
+        que[2][1]="w";
+        que[2][2]="e";
+        que[2][3]="r";
+        que[2][4]="t";
         que[2][5]="3";
 
         que[3][0]="worst teacher of ECE";
@@ -215,7 +243,7 @@ public class homescreen extends AppCompatActivity{
         que[5][1]="Shoab";
         que[5][2]="Mehedi";
         que[5][3]="WTF!!!!";
-        que[5][4]="I am UR Father";
+        que[5][4]="I";
         que[5][5]="1";
 
         que[6][0]="Your NSU CGPA??";
@@ -225,11 +253,11 @@ public class homescreen extends AppCompatActivity{
         que[6][4]="Between 2 & 3";
         que[6][5]="4";
 
-        que[7][0]="Fav porn category";
-        que[7][1]="Anal";
-        que[7][2]="Threesome";
-        que[7][3]="Gangbang";
-        que[7][4]="Lesbian";
+        que[7][0]="Fav  category";
+        que[7][1]="ab";
+        que[7][2]="a";
+        que[7][3]="s";
+        que[7][4]="d";
         que[7][5]="3";
 
         que[8][0]="worst teacher of ECE";
@@ -300,11 +328,6 @@ public class homescreen extends AppCompatActivity{
                     bg2.setVisibility(LinearLayout.VISIBLE);
                     finalScoreTextview.setText("Score : "+String.valueOf(score));
                     timeleft.setText("Time : "+String.valueOf(timeTaken));
-                    if (score>0) {
-                        //scoreStar.setVisibility(ImageView.VISIBLE);
-                        scoreStar.setImageResource(R.drawable.soundicon);
-
-                    }
                 }
                 c1.setBackgroundResource(R.drawable.frame);
                 c2.setBackgroundResource(R.drawable.frame);
@@ -312,6 +335,33 @@ public class homescreen extends AppCompatActivity{
                 c4.setBackgroundResource(R.drawable.frame);
                 setQuestion();
                 clicked=0;
+
+
+                if (score==0) {
+                    //scoreStar.setVisibility(ImageView.VISIBLE);
+                    startextview.setText("Seriouly!! 0 Star!!!");
+                    scoreStar.setImageResource(R.drawable.onestar);
+                }
+                else if(score<3){
+                    startextview.setText("Try Harder1");
+                    scoreStar.setImageResource(R.drawable.onestar);
+                }
+                else if(score<5){
+                    startextview.setText("Try More and More");
+                    scoreStar.setImageResource(R.drawable.twostar);
+                }
+                else if(score<7){
+                    startextview.setText("Try Your Best");
+                    scoreStar.setImageResource(R.drawable.threestar);
+                }
+                else if(score<9){
+                    startextview.setText("Keep trying");
+                    scoreStar.setImageResource(R.drawable.fourstar);
+                }
+                else{
+                    startextview.setText("You are Genios Man!!!");
+                    scoreStar.setImageResource(R.drawable.fivestar);
+                }
             }
         });
 
@@ -483,6 +533,10 @@ public class homescreen extends AppCompatActivity{
             }
         });
 
+
+
+    }
+    public void  test(){
 
     }
 }

@@ -185,13 +185,40 @@
                         android:orientation="vertical"
                         android:visibility="invisible">
 
-                        <ImageView
-                            android:id="@+id/scoreStar"
-                            android:layout_width="match_parent"
-                            android:layout_height="250dp"
-                            android:background="@color/colorPrimary"
-                            android:src="@mipmap/soundicon" />
 
+                        <LinearLayout
+                            android:id="@+id/startextandstarimage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Thanks for Your Support"
+                                android:textSize="25dp"
+                                android:background="@color/white"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimaryDark"
+                                />
+                            <TextView
+                                android:id="@+id/startextview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Star"
+                                android:textSize="50dp"
+                                android:background="@color/white"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimaryDark"
+                                />
+
+                            <ImageView
+                                android:id="@+id/scoreStar"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:background="@color/white"
+                                android:src="@mipmap/soundicon" />
+
+                        </LinearLayout>
                         <TextView
                             android:id="@+id/finalScoreTextview"
                             android:layout_width="wrap_content"
