@@ -536,7 +536,7 @@ public class homescreen extends AppCompatActivity{
 
 
     }
-    public void  test(){
-
+    public void  testt(){
+//code
     }
 }
